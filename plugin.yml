@@ -1,0 +1,31 @@
+name: BedrockEconomy
+version: 1.0.0
+main: BedrockEconomy\Main
+api: 5.0.0
+author: Firekid846
+description: Custom economy system for Firekid846's server
+
+commands:
+  bal:
+    description: Check your balance
+    usage: "/bal [player]"
+    aliases: ["balance", "money"]
+  richest:
+    description: View top 10 richest players
+    usage: "/richest"
+    aliases: ["baltop", "topmoney"]
+  pay:
+    description: Pay another player
+    usage: "/pay <player> <amount>"
+  eco:
+    description: Admin economy commands
+    usage: "/eco <give|take|set|reset> <player> [amount]"
+    permission: bedrockeconomy.admin
+  shop:
+    description: Open server shop (Use NPC in lobby)
+    usage: "/shop"
+
+permissions:
+  bedrockeconomy.admin:
+    description: Allows using admin economy commands
+    default: op
