@@ -10,13 +10,16 @@ commands:
     description: Check your balance
     usage: "/bal [player]"
     aliases: ["balance", "money"]
+    permission: bedrockeconomy.command.bal
   richest:
     description: View top 10 richest players
     usage: "/richest"
     aliases: ["baltop", "topmoney"]
+    permission: bedrockeconomy.command.richest
   pay:
     description: Pay another player
     usage: "/pay <player> <amount>"
+    permission: bedrockeconomy.command.pay
   eco:
     description: Admin economy commands
     usage: "/eco <give|take|set|reset> <player> [amount]"
@@ -24,8 +27,21 @@ commands:
   shop:
     description: Open server shop (Use NPC in lobby)
     usage: "/shop"
+    permission: bedrockeconomy.command.shop
 
 permissions:
   bedrockeconomy.admin:
     description: Allows using admin economy commands
     default: op
+  bedrockeconomy.command.bal:
+    description: Allows using /bal command
+    default: true
+  bedrockeconomy.command.richest:
+    description: Allows using /richest command
+    default: true
+  bedrockeconomy.command.pay:
+    description: Allows using /pay command
+    default: true
+  bedrockeconomy.command.shop:
+    description: Allows using /shop command
+    default: true
